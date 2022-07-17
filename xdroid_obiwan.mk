@@ -21,13 +21,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from instantnoodlep device
 $(call inherit-product, device/asus/obiwan/device.mk)
 
-# Inherit some common Bliss stuff.
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+# Inherit some common xdroid stuff.
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
-# Bootanimation
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# UDFPS Animations
+# xdroidOS Property
+XDROID_BOOT := 1080
+XDROID_MAINTAINER := xyzuan
+TARGET_SUPPORTS_GOOGLE_RECORDER := tre
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
@@ -35,7 +38,7 @@ PRODUCT_BRAND := asus
 PRODUCT_DEVICE := obiwan
 PRODUCT_MANUFACTURER := asus
 PRODUCT_MODEL := ASUS_I003D
-PRODUCT_NAME := bliss_obiwan
+PRODUCT_NAME := xdroid_obiwan
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
